@@ -2,32 +2,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
 using DevExpress.Data;
 
 namespace Model {
     public class ViewModel {
-        public List<string> Cities { get; private set; }
+        public List<string> States { get; private set; }
         public IList<Employee> Source { get; private set; }
         public ObservableCollection<Column> Columns { get; private set; }
         public ObservableCollection<Summary> TotalSummary { get; private set; }
         public ObservableCollection<Summary> GroupSummary { get; private set; }
         public ViewModel() {
             Source = EmployeesData.DataSource;
-            List<string> cities = new List<string>();
-            foreach(Employee employee in Source) {
-                if(!cities.Contains(employee.City))
-                    cities.Add(employee.City);
-            }
-            Cities = cities;
+            States = Source.Select(x => x.StateProvinceName).Distinct().ToList();
             Columns = new ObservableCollection<Column>() {
-                new Column() { FieldName="FirstName", Settings = SettingsType.Default },
-                new Column() { FieldName="LastName", Settings = SettingsType.Default},
-                new Column() { FieldName="BirthDate", Settings = SettingsType.Default},
-                new ComboColumn() { FieldName="City", Settings = SettingsType.Combo, Source = Cities },
-                new Column() { FieldName="ImageData", Settings = SettingsType.Image },
-
+                new Column() { FieldName="FirstName" },
+                new Column() { FieldName="LastName" },
+                new ComboColumn() { Settings = SettingsType.Combo, FieldName="StateProvinceName", Source = States },
+                new HeaderColumn() { Settings = SettingsType.Binding, FieldName = "Cities[0]", Header = "City1" },
+                new HeaderColumn() { Settings = SettingsType.Binding, FieldName = "Cities[1]", Header = "City2" },
+                new Column() { FieldName="ImageData", Settings = SettingsType.Image }
             };
             TotalSummary = new ObservableCollection<Summary>() {
                 new Summary() { Type = SummaryItemType.Count, FieldName = "FirstName" },
@@ -39,7 +35,7 @@ namespace Model {
         }
     }
 
-    public enum SettingsType { Default, Combo, Image }
+    public enum SettingsType { Default, Combo, Image, Binding }
 
     public class Summary {
         public SummaryItemType Type { get; set; }
@@ -53,16 +49,16 @@ namespace Model {
     public class ComboColumn : Column {
         public IList Source { get; set; }
     }
+    public class HeaderColumn : Column {
+        public string Header { get; set; }
+    }
 
     [XmlRoot("Employees")]
     public class EmployeesData : List<Employee> {
         public static IList<Employee> DataSource {
             get {
-
                 XmlSerializer s = new XmlSerializer(typeof(EmployeesData));
-
                 return (List<Employee>)s.Deserialize(Assembly.GetExecutingAssembly().GetManifestResourceStream("WPFGridMVVMBindableColumns.EmployeesWithPhoto.xml"));
-
             }
         }
     }
@@ -78,7 +74,7 @@ namespace Model {
         public string Phone { get; set; }
         public string EmailAddress { get; set; }
         public string AddressLine1 { get; set; }
-        public string City { get; set; }
+        public List<string> Cities { get; set; }
         public string StateProvinceName { get; set; }
         public string PostalCode { get; set; }
         public string CountryRegionName { get; set; }

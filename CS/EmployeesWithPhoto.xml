@@ -9,7 +9,10 @@
     <Phone>(417) 166-3268</Phone>
     <EmailAddress>Bruce_Cambell@example.com</EmailAddress>
     <AddressLine1>4228 S National Ave</AddressLine1>
-    <City>Springfield</City>
+    <Cities>
+      <string>Kansas City</string>
+      <string>Springfield</string>
+    </Cities>
     <StateProvinceName>Missouri</StateProvinceName>
     <PostalCode>65809</PostalCode>
     <CountryRegionName>United States</CountryRegionName>
@@ -30,7 +33,10 @@
     <Phone>(918) 161-3649</Phone>
     <EmailAddress>Cindy_Haneline@example.com</EmailAddress>
     <AddressLine1>2429 E. 15th Street</AddressLine1>
-    <City>Tulsa</City>
+    <Cities>
+      <string>Oklahoma City</string>
+      <string>Tulsa</string>
+    </Cities>
     <StateProvinceName>Oklahoma</StateProvinceName>
     <PostalCode>74014</PostalCode>
     <CountryRegionName>United States</CountryRegionName>
@@ -50,7 +56,10 @@
     <Phone>(303) 718-1654</Phone>
     <EmailAddress>Andrea_Deville@example.com</EmailAddress>
     <AddressLine1>14200 E Ellsworth Rd</AddressLine1>
-    <City>Aurora</City>
+    <Cities>
+      <string>Denver</string>
+      <string>Colorado Springs</string>
+    </Cities>
     <StateProvinceName>Colorado</StateProvinceName>
     <PostalCode>80012</PostalCode>
     <CountryRegionName>United States</CountryRegionName>
@@ -70,7 +79,10 @@
     <Phone>(720) 971-3927</Phone>
     <EmailAddress>Anita_Ryan@example.com</EmailAddress>
     <AddressLine1>1017 N Market Plaza</AddressLine1>
-    <City>West</City>
+    <Cities>
+      <string>Denver</string>
+      <string>Aurora</string>
+    </Cities>
     <StateProvinceName>Colorado</StateProvinceName>
     <PostalCode>81007</PostalCode>
     <CountryRegionName>United States</CountryRegionName>
