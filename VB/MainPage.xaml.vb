@@ -3,11 +3,11 @@ Imports System.Windows
 Imports Model
 
 Namespace GridMVVMBindableColumns
-    Partial Public Class MainPage
-        Inherits UserControl
+	Partial Public Class MainPage
+		Inherits UserControl
 
-        Public Sub New()
-            InitializeComponent()
-        End Sub
-    End Class
+		Public Sub New()
+			InitializeComponent()
+		End Sub
+	End Class
 End Namespace

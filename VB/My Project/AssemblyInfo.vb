@@ -31,14 +31,9 @@ Imports System.Windows
 '[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 #If Not SILVERLIGHT Then
-<Assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly), assembly: AssemblyVersion("1.0.0.0"), assembly: AssemblyFileVersion("1.0.0.0")> 'where the generic resource dictionary is located - where theme specific resource dictionaries are located
-    '(used if a resource is not found in the page, 
-    ' or application resource dictionaries)
-    '(used if a resource is not found in the page, 
-    ' app, or any theme specific resource dictionaries)
+<Assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)>
 #Else
 <Assembly: Guid("94c28113-e01e-4b5a-b3f9-0a93adbbeae1")>
-<Assembly: AssemblyVersion("1.0.0.0"), assembly: AssemblyFileVersion("1.0.0.0")>
 #End If
 
 ' Version information for an assembly consists of the following four values:
@@ -51,3 +46,5 @@ Imports System.Windows
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>
