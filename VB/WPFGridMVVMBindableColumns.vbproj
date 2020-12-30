@@ -27,6 +27,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -36,25 +37,27 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
   </PropertyGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System.Collections.Generic" />
+    <Import Include="System" />
     <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
     <Import Include="System.Data" />
+    <Import Include="System.Windows" />
     <Import Include="System.Windows.Controls" />
     <Import Include="System.Windows.Data" />
-    <Import Include="System.Windows.Shapes" />
     <Import Include="System.Windows.Documents" />
     <Import Include="System.Windows.Input" />
-    <Import Include="System.Windows.Media.Imaging" />
     <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
     <Import Include="System.Windows.Navigation" />
-    <Import Include="System.Windows" />
-    <Import Include="System" />
+    <Import Include="System.Windows.Shapes" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v14.2" />
