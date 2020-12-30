@@ -21,3 +21,5 @@ For more information please refer to these help topics:
 * [TotalSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.TotalSummarySource)
 * [GroupSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl.GroupSummarySource)
 * [Binding to Total and Group Summaries](https://docs.devexpress.com/WPF/10124/controls-and-libraries/data-grid/mvvm-enhancements/binding-to-total-and-group-summaries)
+
+---
