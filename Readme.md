@@ -13,6 +13,11 @@
 
 This example shows how to put columns and data summary definition logic in the ViewModel and setup the Grid Control.
 
-<br/>
+---
 
+For more information please refer to these help topics: 
 
+* [ColumnsSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnsSource)
+* [TotalSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.TotalSummarySource)
+* [GroupSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl.GroupSummarySource)
+* [Binding to Total and Group Summaries](https://docs.devexpress.com/WPF/10124/controls-and-libraries/data-grid/mvvm-enhancements/binding-to-total-and-group-summaries)
