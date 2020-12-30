@@ -26,6 +26,15 @@
                 <dxg:GridColumn FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"/>
             </ContentControl>
         </DataTemplate>
+        <DataTemplate x:Key="DateColumnTemplate">
+            <ContentControl>
+                <dxg:GridColumn  FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+            </ContentControl>
+        </DataTemplate>
         <DataTemplate x:Key="ComboColumnTemplate">
             <ContentControl>
                 <dxg:GridColumn  FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}">
