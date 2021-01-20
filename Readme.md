@@ -1,25 +1,21 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [ColumnTemplateSelector.cs](./CS/ColumnTemplateSelector.cs) (VB: [ColumnTemplateSelector.vb](./VB/ColumnTemplateSelector.vb))
-* **[MainPage.xaml](./CS/MainPage.xaml) (VB: [MainPage.xaml](./VB/MainPage.xaml))**
-* [MainPage.xaml.cs](./CS/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/MainPage.xaml.vb))
-* [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
-* [ViewModel.cs](./CS/ViewModel.cs) (VB: [ViewModel.vb](./VB/ViewModel.vb))
+* [MainWindow.xaml](./CS/ColumnsSample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/ColumnsSample/MainWindow.xaml))
+* [EmployeesViewModel.cs](./CS/ColumnsSample/EmployeesViewModel.cs) (VB: [EmployeesViewModel.vb](./VB/ColumnsSample/EmployeesViewModel.vb))
+* [EmployeesDataModel.cs](./CS/ColumnsSample/EmployeesDataModel.cs) (VB: [EmployeesDataModel.vb](./VB/ColumnsSample/EmployeesDataModel.vb))
+* [ColumnTemplateSelector.cs](./CS/ColumnsSample/ColumnTemplateSelector.cs) (VB: [ColumnTemplateSelector.vb](./VB/ColumnsSample/ColumnTemplateSelector.vb))
 <!-- default file list end -->
-# How to bind the grid to Columns and Summaries specified in ViewModel
+
+# WPF MVVM How to Bind the GridContol to a Collection of Columns Specified in ViewModel
+
+This topic describes how to define columns in a ViewModel and bind them to the GridControl's column collection.
 
 
-This example shows how to put columns and data summary definition logic in the ViewModel and setup the Grid Control.
 
----
+For more information, refer to the following help topics: 
 
-For more information please refer to these help topics: 
-
+* [How to: Bind the Grid to a Collection of Columns](http://docs.devexpress.com/WPF/10121/controls-and-libraries/data-grid/mvvm-enhancements/binding-to-a-collection-of-columns)
 * [ColumnsSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnsSource)
-* [TotalSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.TotalSummarySource)
-* [GroupSummarySource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl.GroupSummarySource)
-* [Binding to Total and Group Summaries](https://docs.devexpress.com/WPF/10124/controls-and-libraries/data-grid/mvvm-enhancements/binding-to-total-and-group-summaries)
-
----
+* [ColumnGeneratorTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplate)
+* [ColumnGeneratorTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplateSelector)
