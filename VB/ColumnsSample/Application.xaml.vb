@@ -3,9 +3,10 @@ Imports System.Collections.Generic
 Imports System.Configuration
 Imports System.Data
 Imports System.Linq
+Imports System.Threading.Tasks
 Imports System.Windows
 
-Namespace WPFGridMVVMBindableColumns
+Namespace ColumnsSample
 	''' <summary>
 	''' Interaction logic for App.xaml
 	''' </summary>
