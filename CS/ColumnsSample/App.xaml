@@ -1,6 +1,7 @@
-<Application x:Class="WPFGridMVVMBindableColumns.App"
+﻿<Application x:Class="ColumnsSample.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ColumnsSample"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

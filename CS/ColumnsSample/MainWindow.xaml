@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColumnsSample"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+        xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        x:Class="ColumnsSample.MainWindow" mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="700">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <DataTemplate x:Key="DefaultColumnTemplate">
+            <ContentControl>
+                <dxg:GridColumn FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"/>
+            </ContentControl>
+        </DataTemplate>
+        <DataTemplate x:Key="LookupColumnTemplate">
+            <ContentControl>
+                <dxg:GridColumn  FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:ComboBoxEditSettings ItemsSource="{Binding Source}"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+            </ContentControl>
+        </DataTemplate>
+        <DataTemplate x:Key="BindingColumnTemplate">
+            <ContentControl>
+                <dxg:GridColumn local:BindingHelper.Path="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"
+                                Header="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}"/>
+            </ContentControl>
+        </DataTemplate>
+        <local:ColumnTemplateSelector x:Key="ColumnTemplateSelector"
+                                      DefaultColumnTemplate ="{StaticResource DefaultColumnTemplate}"
+                                      LookupColumnTemplate ="{StaticResource LookupColumnTemplate}"
+                                      BindingColumnTemplate ="{StaticResource BindingColumnTemplate}"/>
+    </Window.Resources>
+    <dxg:GridControl ItemsSource="{Binding Source}" ColumnsSource="{Binding Columns}"
+                     ColumnGeneratorTemplateSelector="{StaticResource ColumnTemplateSelector}">
+        <dxg:GridControl.View>
+            <dxg:TableView />
+        </dxg:GridControl.View>
+    </dxg:GridControl>
+</Window>
