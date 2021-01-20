@@ -11,7 +11,7 @@
 
 This topic describes how to define columns in a ViewModel and bind them to the GridControl's column collection.
 
-
+![](/Images/mvvm-columnbinding-result14130.png)
 
 For more information, refer to the following help topics: 
 
@@ -19,3 +19,5 @@ For more information, refer to the following help topics:
 * [ColumnsSource](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnsSource)
 * [ColumnGeneratorTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplate)
 * [ColumnGeneratorTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplateSelector)
+
+For example on how to bind the GridContol to total and group summaries specified in ViewModel, refer to the [https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel](https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel).
