@@ -7,7 +7,7 @@
 * [ColumnTemplateSelector.cs](./CS/ColumnsSample/ColumnTemplateSelector.cs) (VB: [ColumnTemplateSelector.vb](./VB/ColumnsSample/ColumnTemplateSelector.vb))
 <!-- default file list end -->
 
-# WPF MVVM How to Bind the GridContol to a Collection of Columns Specified in ViewModel
+# How to Bind the WPF GridContol to a Collection of Columns Specified in ViewModel
 
 This topic describes how to define columns in a ViewModel and bind them to the GridControl's column collection.
 
