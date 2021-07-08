@@ -20,4 +20,4 @@ For more information, refer to the following help topics:
 * [ColumnGeneratorTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplate)
 * [ColumnGeneratorTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplateSelector)
 
-For example on how to bind the GridControl to total and group summaries specified in ViewModel, refer to the [https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel](https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel).
+For example on how to bind the GridControl to total and group summaries specified in ViewModel, refer to the [https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontrol-to-total-and-group-summaries-specified-in-viewmodel](https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontrol-to-total-and-group-summaries-specified-in-viewmodel).
