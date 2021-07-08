@@ -7,7 +7,7 @@
 * [ColumnTemplateSelector.cs](./CS/ColumnsSample/ColumnTemplateSelector.cs) (VB: [ColumnTemplateSelector.vb](./VB/ColumnsSample/ColumnTemplateSelector.vb))
 <!-- default file list end -->
 
-# How to Bind the WPF GridContol to a Collection of Columns Specified in ViewModel
+# How to Bind the WPF GridControl to a Collection of Columns Specified in ViewModel
 
 This topic describes how to define columns in a ViewModel and bind them to the GridControl's column collection.
 
@@ -20,4 +20,4 @@ For more information, refer to the following help topics:
 * [ColumnGeneratorTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplate)
 * [ColumnGeneratorTemplateSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.ColumnGeneratorTemplateSelector)
 
-For example on how to bind the GridContol to total and group summaries specified in ViewModel, refer to the [https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel](https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel).
+For example on how to bind the GridControl to total and group summaries specified in ViewModel, refer to the [https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel](https://github.com/DevExpress-Examples/wpf-mvvm-how-to-bind-the-gridcontol-to-total-and-group-summaries-specified-in-viewmodel).
