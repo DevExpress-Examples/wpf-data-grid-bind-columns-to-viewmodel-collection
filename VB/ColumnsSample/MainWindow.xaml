@@ -14,24 +14,18 @@
     </Window.DataContext>
     <Window.Resources>
         <DataTemplate x:Key="DefaultColumnTemplate">
-            <ContentControl>
-                <dxg:GridColumn FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"/>
-            </ContentControl>
+            <dxg:GridColumn FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"/>
         </DataTemplate>
         <DataTemplate x:Key="LookupColumnTemplate">
-            <ContentControl>
-                <dxg:GridColumn  FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}">
-                    <dxg:GridColumn.EditSettings>
-                        <dxe:ComboBoxEditSettings ItemsSource="{Binding Source}"/>
-                    </dxg:GridColumn.EditSettings>
-                </dxg:GridColumn>
-            </ContentControl>
+            <dxg:GridColumn  FieldName="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}">
+                <dxg:GridColumn.EditSettings>
+                    <dxe:ComboBoxEditSettings ItemsSource="{Binding Source}"/>
+                </dxg:GridColumn.EditSettings>
+            </dxg:GridColumn>
         </DataTemplate>
         <DataTemplate x:Key="BindingColumnTemplate">
-            <ContentControl>
-                <dxg:GridColumn local:BindingHelper.Path="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"
-                                Header="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}"/>
-            </ContentControl>
+            <dxg:GridColumn local:BindingHelper.Path="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}"
+                            Header="{Binding Path=(dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}"/>
         </DataTemplate>
         <local:ColumnTemplateSelector x:Key="ColumnTemplateSelector"
                                       DefaultColumnTemplate ="{StaticResource DefaultColumnTemplate}"
