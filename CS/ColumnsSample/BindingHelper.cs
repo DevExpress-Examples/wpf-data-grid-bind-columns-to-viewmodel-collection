@@ -10,7 +10,13 @@ namespace ColumnsSample {
         public static void SetPath(GridColumn obj, string value) {
             obj.SetValue(PathProperty, value);
         }
-        public static readonly DependencyProperty PathProperty =
-            DependencyProperty.RegisterAttached("Path", typeof(string), typeof(BindingHelper), new PropertyMetadata((d, e) => { if (!string.IsNullOrWhiteSpace(e.NewValue as string)) ((GridColumn)d).Binding = new Binding("RowData.Row." + e.NewValue) { Mode = BindingMode.TwoWay }; }));
+        public static readonly DependencyProperty PathProperty = DependencyProperty.RegisterAttached("Path", typeof(string), typeof(BindingHelper), 
+            new PropertyMetadata((d, e) => { 
+                if (!string.IsNullOrWhiteSpace(e.NewValue as string)) 
+                    ((GridColumn)d).Binding = new Binding((string)e.NewValue) { 
+                        Mode = BindingMode.TwoWay 
+                    }; 
+            })
+        );
     }
 }
