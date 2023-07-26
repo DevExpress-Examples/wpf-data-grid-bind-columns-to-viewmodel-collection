@@ -15,7 +15,7 @@ Namespace ColumnsSample
         End Sub
 
         Public ReadOnly PathProperty As DependencyProperty = DependencyProperty.RegisterAttached("Path", GetType(String), GetType(BindingHelper), New PropertyMetadata(Sub(d, e)
-            If Not String.IsNullOrWhiteSpace(TryCast(e.NewValue, String)) Then CType(d, GridColumn).Binding = New Binding("RowData.Row." & e.NewValue) With {.Mode = BindingMode.TwoWay}
+            If Not String.IsNullOrWhiteSpace(TryCast(e.NewValue, String)) Then CType(d, GridColumn).Binding = New Binding(CStr(e.NewValue)) With {.Mode = BindingMode.TwoWay}
         End Sub))
     End Module
 End Namespace
